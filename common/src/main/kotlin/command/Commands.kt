@@ -3,6 +3,7 @@ package dev.sentix.squaremarker.command
 import dev.sentix.squaremarker.Components
 import dev.sentix.squaremarker.Lang
 import dev.sentix.squaremarker.SquareMarker
+import dev.sentix.squaremarker.command.commands.DebugCommand
 import dev.sentix.squaremarker.command.commands.HelpCommand
 import dev.sentix.squaremarker.command.commands.ListMarkerCommand
 import dev.sentix.squaremarker.command.commands.RemoveMarkerCommand
@@ -35,6 +36,7 @@ class Commands(
             SetMarkerCommand(squareMarker, this),
             ShowMarkerCommand(squareMarker, this),
             UpdateMarkerCommand(squareMarker, this),
+            DebugCommand(squareMarker, this),
         ).forEach(SquaremarkerCommand::register)
     }
 
